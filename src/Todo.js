@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './App.module.css'
+
 const Todo = ({ todo, toggleTodo }) => {
 
 	const handleTodoClick = () => {

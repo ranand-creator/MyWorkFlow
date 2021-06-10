@@ -3,6 +3,7 @@ import TodoList from './TodoList'
 import { v4 as uuidv4 } from 'uuid'
 import './App.css'
 import styles from './App.module.css'
+import Modal from './Modal/Modal'
 
 const LOCAL_STORAGE_KEY = 'todosApp.todos'
 
@@ -10,6 +11,7 @@ const App = () => {
 
 	// todos schema: name, id, completed
 	const [todos , setTodos] = useState([])
+	const [showSettings, setShowSettings] = useState(false)
 	const todoNameRef = useRef()
 
 	// Because this effect does not have any parameters in the array, it will only be called on page load
@@ -51,16 +53,35 @@ const App = () => {
 
 	const handleClearTodos = () => setTodos(todos.filter(todo => !todo.completed))
 
+	const handleOpenSettings = () =>	setShowSettings(true)
+
+	const handleCloseSettings = () => setShowSettings(false)
+
 	return (
 		<>
 			<div className={styles.centerElements + ' ' + styles.titleText}>
 				{findLeftTodos()} tasks left to complete
 			</div> 
+
 			<TodoList todos={todos} toggleTodo={toggleTodo} />
+
 			<input className={styles.inputText} ref={todoNameRef} type="text" />
-			<button className={styles.btn + ' ' + styles.addTask} onClick={handleAddTodo}>Add Task</button>
+
+			<button className={styles.btn + ' ' + styles.addTask} onClick={handleAddTodo}>
+				Add Task
+			</button>
+
 			<br></br>
-			<button className={styles.btn + ' ' + styles.addTask} onClick={handleClearTodos}>Clear Completed Tasks</button>
+
+			<button className={styles.btn + ' ' + styles.addTask} onClick={handleClearTodos}>
+				Clear Completed Tasks
+			</button>
+
+			<button className={styles.btn + ' ' + styles.addTask} onClick={handleOpenSettings}>
+				Settings
+			</button>
+			
+			<Modal show={showSettings} handleCloseSettings={handleCloseSettings} />
 		</>
 	)
 }
