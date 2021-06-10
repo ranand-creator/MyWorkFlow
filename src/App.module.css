@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+
+.homeIcon {
+  height: 1.2em;
+}
+
+.borderTest {
+	border: 1px solid black;
+}
+
+.verticalCenter {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.titleText {
+	font-family: 'Baloo 2';
+	font-size: 5vw;
+}
+
+.taskText {
+	font-family: 'Baloo 2';
+	font-size: 3vw;
+}
+
+.inputText {
+	font-family: 'Baloo 2';
+	font-size: 2.5vw;
+	border: 0px transparent;
+}
+
+.incompleteTask {
+	color: rgba(33.56%,43.00%,52.11%,1.000);
+}
+
+.completeTask {
+	color: rgba(53.27%,37.55%,31.92%,1.000);
+}
+
+.centerElements {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+
+.btn {
+  border: 2px solid rgba(33.56%,43.00%,52.11%,1.000);
+  border-radius: 0.6em;
+  color: rgba(33.56%,43.00%,52.11%,1.000);
+  cursor: pointer;
+  font-size: 2vw;
+  font-weight: 400;
+  line-height: 1;
+  margin: 3vw;
+  padding: 0.6em 1.4em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.btn:hover, .btn:focus {
+  color: rgb(235,229,225);;
+  outline: 0;
+}
+
+.addTask {
+  -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.addTask:hover {
+  box-shadow: 0 0 40px 40px rgba(33.56%,43.00%,52.11%,1.000) inset;
+}
