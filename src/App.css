@@ -5,6 +5,7 @@ html, body {
   background-color: rgb(235,229,225);
   display: table-cell;
   width: 100vw;
+  /* max-width: 500px; */
   height: 100vh;
   vertical-align: middle;
   text-align: center;

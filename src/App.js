@@ -62,25 +62,19 @@ const App = () => {
 			<div className={styles.centerElements + ' ' + styles.titleText}>
 				{findLeftTodos()} tasks left to complete
 			</div> 
-
 			<TodoList todos={todos} toggleTodo={toggleTodo} />
-
 			<input className={styles.inputText} ref={todoNameRef} type="text" />
-
 			<button className={styles.btn + ' ' + styles.addTask} onClick={handleAddTodo}>
 				Add Task
 			</button>
-
 			<br></br>
 
 			<button className={styles.btn + ' ' + styles.addTask} onClick={handleClearTodos}>
 				Clear Completed Tasks
 			</button>
-
 			<button className={styles.btn + ' ' + styles.addTask} onClick={handleOpenSettings}>
 				Settings
-			</button>
-			
+			</button>	
 			<Modal show={showSettings} handleCloseSettings={handleCloseSettings} />
 		</>
 	)
