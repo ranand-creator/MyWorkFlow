@@ -1,6 +1,6 @@
 # MyTaskFlow
 
-This is a web application to help you plan and organize your work in the form of short tasks to complete over the course of your schedule. 
+This is a web application to help you plan and organize your work in the form of short tasks to complete over the course of your schedule. Use the live site at [https://my-work-flow.herokuapp.com/](https://my-work-flow.herokuapp.com/)
 
 ## Running the App (for Development Purposes)
 
